@@ -13,6 +13,8 @@
         <script> //Starts Javascript
             //Your Javascript goes here
 
+            alert("Press F12 to check the answers in the DevTools console");
+
             console.log("Add 7 to a number")
             function add7(){
                 return Number(prompt("Pick a number"))+7;
@@ -40,34 +42,29 @@
             console.log(capitalize());
 
 
-            console.log("capitalize & retun only the 1st letter");
-            function capitalize(){
-                let str = prompt("Enter a word in lowercase");
+            console.log("capitalize only the 1st letter & Return it with the rest of the string ");
+            function capitalize2(){
+                let str1 = prompt("Enter a word in lowercase");
         
-                return str[0].toUpperCase(); //Capitalize only the first letter
+                return str1[0].toUpperCase() + str1.slice(1); 
+                //Capitalize only the first letter
+                // slice(#,#) = Returns the start to end of a string
+                //slice(1) = Returns string from the 2nd letter to last.
             }
-            console.log(capitalize());
+            console.log(capitalize2());
 
 
 
-            console.log("Returns the Last Letter")
+            console.log("Returns the Last Letter");
             function lastLetter(){
-                let str1= prompt("Enter a string");
-
-                for(i=0; i<str1.length;i++){
-                    //Loops the length of the strings &
-                    //Returns the last value 
-                    str1[i];
-                }
+                let str2= prompt("Enter a string");
             
-                return str1[i];
+                return str2.slice(-1);
+                // slice(#,#) = Returns the start to end of a string
+                // slice(-#,-#) = Returns the end to start of a string (right to left)
+                //slice(-1) = Returns first letter starting from the right (end) of the string.
             }
             console.log(lastLetter()); 
-
-
-
-
-
                
 
        </script>
